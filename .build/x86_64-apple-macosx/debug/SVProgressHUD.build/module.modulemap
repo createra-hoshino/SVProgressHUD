@@ -1,0 +1,4 @@
+module SVProgressHUD {
+    header "/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug/SVProgressHUD.build/SVProgressHUD-Swift.h"
+    requires objc
+}

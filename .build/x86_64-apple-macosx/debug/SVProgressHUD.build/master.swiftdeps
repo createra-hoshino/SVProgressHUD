@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)"
+options: "8f91f5c080ee05dfa082fbbdc06113a444cc9a4781f02ab54a8aa8fd08142ceb"
+build_start_time: [1634702090, 758832931]
+build_end_time: [1634702092, 378924846]
+inputs:
+  "/Users/h_hoshino/Downloads/SVProgressHUD/Sources/SVProgressHUD/SVProgressHUD.swift": [1634702054, 734282493]
