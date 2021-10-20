@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug/SVProgressHUD.build/master.swiftdeps"
+  },
+  "/Users/h_hoshino/Downloads/SVProgressHUD/Sources/SVProgressHUD/SVProgressHUD.swift": {
+    "dependencies": "/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug/SVProgressHUD.build/SVProgressHUD.d",
+    "object": "/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug/SVProgressHUD.build/SVProgressHUD.swift.o",
+    "swiftmodule": "/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug/SVProgressHUD.build/SVProgressHUD~partial.swiftmodule",
+    "swift-dependencies": "/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug/SVProgressHUD.build/SVProgressHUD.swiftdeps"
+  }
+}

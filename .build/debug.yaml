@@ -1,0 +1,78 @@
+client:
+  name: basic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "SVProgressHUD-debug.module": ["<SVProgressHUD-debug.module>"]
+  "SVProgressHUDPackageTests-debug.test": ["<SVProgressHUDPackageTests-debug.test>"]
+  "SVProgressHUDTests-debug.module": ["<SVProgressHUDTests-debug.module>"]
+  "main": ["<SVProgressHUD-debug.module>"]
+  "test": ["<SVProgressHUD-debug.module>","<SVProgressHUDPackageTests-debug.test>","<SVProgressHUDTests-debug.module>"]
+default: "main"
+nodes:
+  "/Users/h_hoshino/Downloads/SVProgressHUD/Sources/SVProgressHUD/":
+    is-directory-structure: true
+  "/Users/h_hoshino/Downloads/SVProgressHUD/Tests/SVProgressHUDTests/":
+    is-directory-structure: true
+commands:
+  "<SVProgressHUD-debug.module>":
+    tool: phony
+    inputs: ["/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug/SVProgressHUD.build/SVProgressHUD.swift.o","/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug/SVProgressHUD.swiftmodule"]
+    outputs: ["<SVProgressHUD-debug.module>"]
+
+  "<SVProgressHUDPackageTests-debug.test>":
+    tool: phony
+    inputs: ["/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug/SVProgressHUDPackageTests.xctest/Contents/MacOS/SVProgressHUDPackageTests"]
+    outputs: ["<SVProgressHUDPackageTests-debug.test>"]
+
+  "<SVProgressHUDTests-debug.module>":
+    tool: phony
+    inputs: ["/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug/SVProgressHUDTests.build/SVProgressHUDTests.swift.o","/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug/SVProgressHUDTests.swiftmodule"]
+    outputs: ["<SVProgressHUDTests-debug.module>"]
+
+  "C.SVProgressHUD-debug.module":
+    tool: swift-compiler
+    inputs: ["/Users/h_hoshino/Downloads/SVProgressHUD/Sources/SVProgressHUD/SVProgressHUD.swift"]
+    outputs: ["/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug/SVProgressHUD.build/SVProgressHUD.swift.o","/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug/SVProgressHUD.swiftmodule"]
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "SVProgressHUD"
+    module-output-path: "/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug/SVProgressHUD.swiftmodule"
+    import-paths: ["/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug"]
+    temps-path: "/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug/SVProgressHUD.build"
+    objects: ["/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug/SVProgressHUD.build/SVProgressHUD.swift.o"]
+    other-args: ["-target","x86_64-apple-macosx10.10","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug/index/store","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-Onone","-enable-testing","-g","-j8","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug/SVProgressHUD.build/SVProgressHUD-Swift.h","-color-diagnostics"]
+    sources: ["/Users/h_hoshino/Downloads/SVProgressHUD/Sources/SVProgressHUD/SVProgressHUD.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: 8
+
+  "C.SVProgressHUDPackageTests-debug.test":
+    tool: shell
+    inputs: ["/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug/SVProgressHUD.build/SVProgressHUD.swift.o","/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug/SVProgressHUDTests.build/SVProgressHUDTests.swift.o"]
+    outputs: ["/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug/SVProgressHUDPackageTests.xctest/Contents/MacOS/SVProgressHUDPackageTests"]
+    description: "Linking ./.build/x86_64-apple-macosx/debug/SVProgressHUDPackageTests.xctest/Contents/MacOS/SVProgressHUDPackageTests"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug","-o","/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug/SVProgressHUDPackageTests.xctest/Contents/MacOS/SVProgressHUDPackageTests","-module-name","SVProgressHUDPackageTests","-Xlinker","-bundle","-Xlinker","-rpath","-Xlinker","@loader_path/../../../","@/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug/SVProgressHUDPackageTests.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx","-target","x86_64-apple-macosx11.0","-Xlinker","-add_ast_path","-Xlinker","/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug/SVProgressHUD.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug/SVProgressHUDTests.swiftmodule","-L","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib"]
+
+  "C.SVProgressHUDTests-debug.module":
+    tool: swift-compiler
+    inputs: ["/Users/h_hoshino/Downloads/SVProgressHUD/Tests/SVProgressHUDTests/SVProgressHUDTests.swift","/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug/SVProgressHUD.swiftmodule"]
+    outputs: ["/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug/SVProgressHUDTests.build/SVProgressHUDTests.swift.o","/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug/SVProgressHUDTests.swiftmodule"]
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "SVProgressHUDTests"
+    module-output-path: "/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug/SVProgressHUDTests.swiftmodule"
+    import-paths: ["/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug"]
+    temps-path: "/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug/SVProgressHUDTests.build"
+    objects: ["/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug/SVProgressHUDTests.build/SVProgressHUDTests.swift.o"]
+    other-args: ["-target","x86_64-apple-macosx11.0","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug/index/store","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-Onone","-enable-testing","-g","-j8","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/h_hoshino/Downloads/SVProgressHUD/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-color-diagnostics"]
+    sources: ["/Users/h_hoshino/Downloads/SVProgressHUD/Tests/SVProgressHUDTests/SVProgressHUDTests.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: 8
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/h_hoshino/Downloads/SVProgressHUD/Sources/SVProgressHUD/","/Users/h_hoshino/Downloads/SVProgressHUD/Tests/SVProgressHUDTests/","/Users/h_hoshino/Downloads/SVProgressHUD/Package.swift","/Users/h_hoshino/Downloads/SVProgressHUD/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+
